@@ -3,7 +3,7 @@
     class = kw-holder>
     <circle
       class = kw-back
-      [attr.r] = "outerRadius"
+      [attr.r] = "bgRadius"
       [style.fill] = bgColor/>
 
     <g
@@ -16,9 +16,11 @@
 
       <circle
         class = kw-front
+
+        [style.transition] = "'stroke-dasharray ' + animationSecs + 's'"
         [style.stroke] = segment.color
         [style.strokeWidth] = segment.borderWidth
-        [style.strokeDasharray] = segment.strokeProgress
+        [style.strokeDasharray] = "segmentsLoaded ? segment.strokeProgress : segment.strokeEmptyProgress"
         [style.strokeLinecap] = "rounded ? 'round' : ''"
         [attr.r] = segment.computedRadius/>
     </g>
@@ -27,22 +29,21 @@
 
 
   <g
-    attr.transform = "
-      translate({{-100 * (outerRadius/100 - 1)}}, {{-100 * (outerRadius/100 - 1)}})
-      scale({{outerRadius/100}})
-      translate(100, 100)">
+    transform = "translate(100, 100)">
 
     <text
       x = 0
-      y = 0
+      y = -5
       class = kw-value
+      [style.fill] = labelColor
       text-anchor = middle>
       {{label}}
     </text>
     <text
       x = 0
-      y = 40
+      y = 20
       class = kw-heading
+      [style.fill] = headingColor
       text-anchor = middle>
       {{heading}}
     </text>

@@ -14,6 +14,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 
 // EXTERNAL
+import { Observable } from 'rxjs/Rx';
 
 
 
@@ -31,33 +32,40 @@ import { GaugeSegment } from './shared/gauge-segment';
   styleUrls: ['./gauge.component.scss']
 })
 export class GaugeComponent implements OnInit {
-  @Input() outerRadius: number = 100;
+  @Input() bgRadius: number = 100;
   @Input() bgColor: string;
   @Input() rounded: boolean = true;
   @Input() reverse: boolean = false;
-
-
-
-  @Input() segments: GaugeSegment[];
-
+  @Input() animationSecs: number = 0.5;
 
 
   @Input() heading: string;
+  @Input() headingColor: string;
   @Input() label: string;
+  @Input() labelColor: string;
 
 
+  @Input()
+  set segments(segments: GaugeSegment[]) {
+    this.segmentsLoaded = false;
+    this.sortedSegments = this.sortSegments(segments);
+
+    Observable.timer(0)
+      .first()
+      .subscribe(() => this.segmentsLoaded = true);
+  }
+  sortedSegments: GaugeSegment[];
 
 
-  PI: number = Math.PI;
-
+  segmentsLoaded: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  get sortedSegments() {
-    return this.segments.sort((a: GaugeSegment, b: GaugeSegment) => {
+  sortSegments(segments: GaugeSegment[]) {
+    return segments.sort((a: GaugeSegment, b: GaugeSegment) => {
       if (this.reverse) {
         return (a.value / a.goal > b.value / b.goal) ? 1 : -1;
       } else {

@@ -57,4 +57,8 @@ export class GaugeSegment {
   get strokeProgress(this: GaugeSegment) {
     return `${2 * Math.PI * this.computedRadius * this.value / this.goal} ${2 * Math.PI * this.computedRadius}`;
   }
+
+  get strokeEmptyProgress(this: GaugeSegment) {
+    return `0 ${2 * Math.PI * this.computedRadius}`;
+  }
 }

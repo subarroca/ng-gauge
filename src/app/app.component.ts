@@ -42,9 +42,11 @@ export class AppComponent {
   };
 
   nautilusGraph = {
+    bgRadius: 100,
     bgColor: this.colors.indigo,
     rounded: true,
     reverse: true,
+    animationSecs: 2,
     segments: [
       new GaugeSegment({
         value: 4,
@@ -86,9 +88,11 @@ export class AppComponent {
   };
 
   laneGraph = {
+    bgRadius: 100,
     bgColor: this.colors.indigo,
     rounded: true,
     reverse: true,
+    animationSecs: 5,
     segments: [
       new GaugeSegment({
         value: 4,
@@ -136,9 +140,11 @@ export class AppComponent {
   };
 
   pieGraph = {
+    bgRadius: 100,
     bgColor: this.colors.indigo,
     rounded: false,
     reverse: false,
+    animationSecs: 3,
     borderWidth: 100,
     segments: [
       new GaugeSegment({
@@ -175,14 +181,20 @@ export class AppComponent {
   };
 
   progressGraph = {
+    bgRadius: 60,
     bgColor: this.colors.indigo,
     rounded: false,
     reverse: false,
+    animationSecs: 1,
+    heading: 'Loaded',
+    label: '81%',
+    headingColor: 'white',
+    labelColor: this.colors.pink,
     segments: [
       new GaugeSegment({
         value: 81,
         color: this.colors.pink,
-        borderWidth: 50
+        borderWidth: 20
       })
     ]
   };
