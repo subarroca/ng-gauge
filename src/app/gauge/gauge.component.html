@@ -1,0 +1,50 @@
+<svg viewBox = "0 0 200 200">  
+  <g
+    class = kw-holder>
+    <circle
+      class = kw-back
+      [attr.r] = "outerRadius"
+      [style.fill] = bgColor/>
+
+    <g
+      *ngFor = "let segment of sortedSegments">
+      <circle
+        class = kw-mid
+        [style.stroke] = segment.bgColor
+        [style.strokeWidth] = segment.borderWidth
+        [attr.r] = segment.computedRadius/>
+
+      <circle
+        class = kw-front
+        [style.stroke] = segment.color
+        [style.strokeWidth] = segment.borderWidth
+        [style.strokeDasharray] = segment.strokeProgress
+        [style.strokeLinecap] = "rounded ? 'round' : ''"
+        [attr.r] = segment.computedRadius/>
+    </g>
+  </g>
+
+
+
+  <g
+    attr.transform = "
+      translate({{-100 * (outerRadius/100 - 1)}}, {{-100 * (outerRadius/100 - 1)}})
+      scale({{outerRadius/100}})
+      translate(100, 100)">
+
+    <text
+      x = 0
+      y = 0
+      class = kw-value
+      text-anchor = middle>
+      {{label}}
+    </text>
+    <text
+      x = 0
+      y = 40
+      class = kw-heading
+      text-anchor = middle>
+      {{heading}}
+    </text>
+  </g>
+</svg>
