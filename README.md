@@ -27,3 +27,8 @@ GaugeSegment is a class you can use and it has the following properties:
 ## Installing
 ng2-kw-gauge is available via npm
 `npm install ng2-kw-gauge`
+
+Import GaugeModule in your app
+
+Use `<ng2-kw-gauge></ng2-kw-gauge>`.
+Set a width and height for the gauge and it will scale accordingly.
