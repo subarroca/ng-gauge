@@ -29,6 +29,7 @@ ng2-kw-gauge is available via npm
 `npm install ng2-kw-gauge`
 
 Import GaugeModule in your app
+import { GaugeModule, GaugeSegment } from 'ng2-kw-gauge/src'
 
 Use `<ng2-kw-gauge></ng2-kw-gauge>`.
 Set a width and height for the gauge and it will scale accordingly.
