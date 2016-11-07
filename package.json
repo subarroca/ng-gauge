@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/subarroca/ng2-kw-gauge/issues"
   },
-  "homepage": "http://echeung.me/ng2-click-outside/",
+  "homepage": "http://github.com/subarroca/ng2-kw-gauge",
   "scripts": {
     "start": "ng serve",
     "lint": "tslint \"src/**/*.ts\"",
@@ -66,5 +66,9 @@
     "gauge",
     "pie",
     "circular"
+  ],
+  "files":[
+    "index.ts",
+    "src/*"
   ]
 }
