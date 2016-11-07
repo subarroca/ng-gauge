@@ -1,6 +1,6 @@
 /**
  * @category   Component
- * @package    com.kiwity.kw-ng2-gauge.app
+ * @package    com.kiwity.ng2-kw-gauge.app
  * @author     Salvador Subarroca (subarroca@gmail.com)
 **/
 
@@ -8,7 +8,7 @@
 
 
 // ANGULAR
-import { Component, OnInit, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 
 
@@ -26,7 +26,7 @@ import { GaugeSegment } from './gauge/shared/gauge-segment';
 
 
 @Component({
-  selector: 'app-root',
+  selector: 'ng2-kw-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

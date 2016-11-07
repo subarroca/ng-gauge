@@ -1,6 +1,6 @@
 /**
  * @category   Module
- * @package    com.kiwity.kw-ng2-gauge.gauge
+ * @package    com.kiwity.ng2-kw-gauge.gauge
  * @author     Salvador Subarroca (subarroca@gmail.com)
 **/
 
@@ -10,8 +10,6 @@
 // ANGULAR
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 
 
 

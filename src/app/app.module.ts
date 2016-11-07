@@ -1,6 +1,6 @@
 /**
  * @category   Module
- * @package    com.kiwity.kw-ng2-gauge.app
+ * @package    com.kiwity.ng2-kw-gauge.app
  * @author     Salvador Subarroca (subarroca@gmail.com)
 **/
 
@@ -10,8 +10,6 @@
 // ANGULAR
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 
 
 
@@ -36,11 +34,9 @@ import { GaugeModule } from './gauge';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule,
     GaugeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { } 
+export class AppModule { }

@@ -1,1 +1,1 @@
-export * from './gauge.module'; 
+export * from './gauge.module';
