@@ -30,22 +30,15 @@
 
   <g
     transform = "translate(100, 100)">
-
     <text
-      x = 0
-      y = -5
-      class = kw-value
-      [style.fill] = labelColor
+      class = kw-label
+      *ngFor = "let label of labels"
+      [attr.x] = label.x
+      [attr.y] = label.y
+      [style.fill] = label.color
+      [style.fontSize] = label.fontSize
       text-anchor = middle>
-      {{label}}
-    </text>
-    <text
-      x = 0
-      y = 15
-      class = kw-heading
-      [style.fill] = headingColor
-      text-anchor = middle>
-      {{heading}}
+      {{label.text}}
     </text>
   </g>
 </svg>

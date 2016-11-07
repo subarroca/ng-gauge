@@ -21,6 +21,7 @@ import { Observable } from 'rxjs/Rx';
 
 // OWN
 import { GaugeSegment } from './shared/gauge-segment';
+import { GaugeLabel } from './shared/gauge-label';
 
 
 
@@ -41,7 +42,7 @@ export class GaugeComponent implements OnInit {
 
   @Input() heading: string;
   @Input() headingColor: string;
-  @Input() label: string;
+  @Input() labels: GaugeLabel[];
   @Input() labelColor: string;
 
 

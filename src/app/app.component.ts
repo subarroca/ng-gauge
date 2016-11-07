@@ -19,7 +19,7 @@ import { Component } from '@angular/core';
 
 
 // OWN
-import { GaugeSegment } from './gauge/shared/gauge-segment';
+import { GaugeSegment, GaugeLabel } from './gauge';
 
 
 
@@ -38,7 +38,8 @@ export class AppComponent {
     yellow: '#f0c800',
     mint: '#00efab',
     cyan: '#05d1ff',
-    purple: '#841386'
+    purple: '#841386',
+    white: '#fff'
   };
 
   nautilusGraph = {
@@ -186,10 +187,22 @@ export class AppComponent {
     rounded: false,
     reverse: false,
     animationSecs: 1,
-    heading: 'Loaded',
-    label: '81%',
-    headingColor: 'white',
-    labelColor: this.colors.pink,
+    labels: [
+      new GaugeLabel({
+        color: this.colors.white,
+        text: 'Loaded',
+        x: 0,
+        y: 20,
+        fontSize: '1em'
+      }),
+      new GaugeLabel({
+        color: this.colors.pink,
+        text: '81%',
+        x: 0,
+        y: 0,
+        fontSize: '2em'
+      })
+    ],
     segments: [
       new GaugeSegment({
         value: 81,
