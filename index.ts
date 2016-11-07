@@ -1,0 +1,1 @@
+export { GaugeModule, GaugeSegment } from './src/app/gauge';
