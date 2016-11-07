@@ -3,11 +3,11 @@
 body{
   background: #2d2d53;
   color: white;
-  display: flex;
   height: 100vh;
   padding: 0;
   margin: 0;
+  font: 1em sans-serif;
+  display: flex;
   justify-content: center;
   align-items: center;
-  font: 1em sans-serif;
 }

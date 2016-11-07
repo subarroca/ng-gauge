@@ -1,4 +1,12 @@
+:host{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 ng2-kw-gauge{
+  margin: 16px;
   width: 340px;
   height: 340px;
   display: inline-block;
