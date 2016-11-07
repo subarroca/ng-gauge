@@ -1,6 +1,6 @@
 import { Kwng2GaugePage } from './gauge.po';
 
-describe('kwng2-gauge App', function() {
+describe('ng2-kw-gauge App', function() {
   let page: Kwng2GaugePage;
 
   beforeEach(() => {

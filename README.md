@@ -1,31 +1,29 @@
-# Kwng2Gauge
+# ng2-kw-gauge
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.17.
+Flexible gauge graph made with SVG ang Angular2 that can be used as pie chart too.
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The gauge will automatically reload if you change any of the source files.
+## Options:
+* rounded: boolean = true          | whether linecap should be rounded
+* reverse: boolean = false         | segments are sorted by value. whether drawing order should be sorted
+* animationSecs: number = 0.5      | animation of lines when changing values
+* bgRadius: number = 100           | radius of background circle
+* bgColor: string                  | color of background circle
+* heading: string                  | title placed in  center (bottom)
+* headingColor: string             | color of title placed in center
+* label: string                    | value placed in center (top)
+* labelColor: string               | color of value placed in center
+* segments: GaugeSegment           | info to be displayed
 
-## Code scaffolding
+GaugeSegment is a class you can use and it has the following properties:
+* radius: number = 100             | outer radius of this segment (border is painted inside)
+* goal: number = 100               | maximum value for given segment
+* value: number                    | value to be represented
+* color: string                    | color of the segments
+* bgColor: string = 'transparent'  | background color of this segment
+* borderWidth: number = 100        | width of the border. Gets painted inside radius
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/). 
-Before running the tests make sure you are serving the gauge via `ng serve`.
-
-## Deploying to Github Pages
-
-Run `ng github-pages:deploy` to deploy to Github Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Installing
+ng2-kw-gauge is available via npm
+`npm install ng2-kw-gauge`

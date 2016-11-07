@@ -1,6 +1,6 @@
 {
-  "name": "kwng2-gauge",
-  "version": "0.0.0",
+  "name": "ng2-kw-gauge",
+  "version": "0.0.1",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {

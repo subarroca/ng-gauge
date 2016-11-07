@@ -27,7 +27,7 @@ import { GaugeSegment } from './shared/gauge-segment';
 
 
 @Component({
-  selector: 'kwng2-gauge',
+  selector: 'ng2-kw-gauge',
   templateUrl: './gauge.component.html',
   styleUrls: ['./gauge.component.scss']
 })
