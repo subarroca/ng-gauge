@@ -62,7 +62,7 @@ export class GaugeComponent implements OnInit {
   }
 
   sortSegments(segments: GaugeSegment[]) {
-    return segments.sort((a: GaugeSegment, b: GaugeSegment) => {
+    return segments && segments.sort((a: GaugeSegment, b: GaugeSegment) => {
       if (this.reverse) {
         return (a.value / a.goal > b.value / b.goal) ? 1 : -1;
       } else {
