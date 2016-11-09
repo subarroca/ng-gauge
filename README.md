@@ -14,7 +14,7 @@ As seen on Angularbeers http://www.meetup.com/AngularJS-Beers/events/234753624/
 * label: GaugeLabel[]              | labels to be displayed
 * segments: GaugeSegment[]         | info to be displayed
 
-GaugeSegment is a class you MUST use and it has the following properties:
+*GaugeSegment* is a class you *MUST* use and it has the following properties:
 * radius: number = 100             | outer radius of this segment (border is painted inside)
 * goal: number = 100               | maximum value for given segment
 * value: number                    | value to be represented
@@ -22,7 +22,7 @@ GaugeSegment is a class you MUST use and it has the following properties:
 * bgColor: string = 'transparent'  | background color of this segment
 * borderWidth: number = 100        | width of the border. Gets painted inside radius
 
-GaugeLabel is a class you CAN use and it has the following properties:
+*GaugeLabel* is a class you CAN use and it has the following properties:
 * color: string                    | color of this label
 * text: string                     | content of this label
 * x: number = 0                    | x from starting point (center center)
@@ -33,10 +33,12 @@ GaugeLabel is a class you CAN use and it has the following properties:
 
 ## Installing
 ng2-kw-gauge is available via npm
-`npm install ng2-kw-gauge`
+`npm install ng2-kw-gauge -S`
 
-Import GaugeModule in your app
+Import GaugeModule in your module
 `import { GaugeModule, GaugeSegment, GaugeLabel } from 'ng2-kw-gauge'`
+And the models where you need them
+`import { GaugeSegment, GaugeLabel } from 'ng2-kw-gauge'`
 
 Use `<ng2-kw-gauge></ng2-kw-gauge>`.
 Set a width and height for the gauge and it will scale accordingly.
