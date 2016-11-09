@@ -39,11 +39,7 @@ export class GaugeComponent implements OnInit {
   @Input() reverse: boolean = false;
   @Input() animationSecs: number = 0.5;
 
-
-  @Input() heading: string;
-  @Input() headingColor: string;
   @Input() labels: GaugeLabel[];
-  @Input() labelColor: string;
 
 
   @Input()
@@ -56,9 +52,9 @@ export class GaugeComponent implements OnInit {
       .subscribe(() => this.segmentsLoaded = true);
   }
   sortedSegments: GaugeSegment[];
-
-
   segmentsLoaded: boolean = false;
+
+
 
   constructor() { }
 

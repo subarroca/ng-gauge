@@ -93,8 +93,8 @@
       "check-type"
     ],
 
-    "directive-selector-prefix": [true, "ng2-kw-"],
-    "component-selector-prefix": [true, "ng2-kw-"],
+    "directive-selector-prefix": [true, "ng2-kw"],
+    "component-selector-prefix": [true, "ng2-kw"],
     "directive-selector-name": [true, "camelCase"],
     "component-selector-name": [true, "kebab-case"],
     "directive-selector-type": [true, "attribute"],
