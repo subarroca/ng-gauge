@@ -8,12 +8,12 @@ As seen on Angularbeers http://www.meetup.com/AngularJS-Beers/events/234753624/
 ## Installing
 ng2-kw-gauge is available via npm
 ```bash
-npm install ng2-kw-gauge -S;
+npm install ng2-kw-gauge -S
 ```
 
 Import GaugeModule in your module
 ```typescript
-import { GaugeModule, GaugeSegment, GaugeLabel } from 'ng2-kw-gauge';
+import { GaugeModule } from 'ng2-kw-gauge';
 ```
 And the models where you need them
 ```typescript
