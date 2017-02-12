@@ -54,6 +54,8 @@ export class GaugeComponent implements OnInit {
   sortedSegments: GaugeSegment[];
   segmentsLoaded: boolean = false;
 
+  isIE11 = /Trident.*rv[ :]*11\./.test(navigator.userAgent);
+
 
 
   constructor() { }
@@ -70,6 +72,5 @@ export class GaugeComponent implements OnInit {
       }
     });
   }
-
 
 }
