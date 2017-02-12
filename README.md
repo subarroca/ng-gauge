@@ -27,6 +27,7 @@ import { GaugeSegment, GaugeLabel } from 'ng2-kw-gauge';
 ```
 Set a width and height for the gauge and it will scale accordingly.
 
+Example code can be checked in `src/app/app.html` 
 
 
 ## Options:
@@ -52,3 +53,8 @@ Set a width and height for the gauge and it will scale accordingly.
 * x: number = 0                    | x from starting point (center center)
 * y: number = 0                    | y from starting point (center center)
 * fontSize: string = '1em'         | font size of this label
+
+
+## Known issues:
+* IE11 does not show animations
+* IE11 does not show straight lines when displaying full pie chart
