@@ -6,6 +6,6 @@ export class Kwng2GaugePage {
   }
 
   getParagraphText() {
-    return element(by.css('ng2-kw-gauge h1')).getText();
+    return element(by.css('ng-gauge h1')).getText();
   }
 }

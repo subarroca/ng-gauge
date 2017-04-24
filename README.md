@@ -1,4 +1,4 @@
-# ng2-kw-gauge
+# ng-gauge
 Flexible gauge graph made with SVG ang Angular2 that can be used as pie chart too.
 
 As seen on Angularbeers http://www.meetup.com/AngularJS-Beers/events/234753624/
@@ -6,24 +6,24 @@ As seen on Angularbeers http://www.meetup.com/AngularJS-Beers/events/234753624/
 
 
 ## Installing
-ng2-kw-gauge is available via npm
+ng-gauge is available via npm
 ```bash
-npm install ng2-kw-gauge -S
+npm install ng-gauge -S
 ```
 
 Import GaugeModule in your module
 ```typescript
-import { GaugeModule } from 'ng2-kw-gauge';
+import { GaugeModule } from 'ng-gauge';
 ```
 And the models where you need them
 ```typescript
-import { GaugeSegment, GaugeLabel } from 'ng2-kw-gauge';
+import { GaugeSegment, GaugeLabel } from 'ng-gauge';
 
 
 
 ## Usage:
 ```html
-<ng2-kw-gauge></ng2-kw-gauge>
+<ng-gauge></ng-gauge>
 ```
 Set a width and height for the gauge and it will scale accordingly.
 

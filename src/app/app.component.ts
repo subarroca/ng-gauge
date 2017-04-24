@@ -1,6 +1,6 @@
 /**
  * @category   Component
- * @package    com.kiwity.ng2-kw-gauge.app
+ * @package    com.kiwity.gauge.app
  * @author     Salvador Subarroca (subarroca@gmail.com)
 **/
 
@@ -26,7 +26,7 @@ import { GaugeSegment, GaugeLabel } from './gauge';
 
 
 @Component({
-  selector: 'ng2-kw-root',
+  selector: 'ng-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
