@@ -1,6 +1,6 @@
 /**
  * @category   Component
- * @package    com.kiwity.ng2-kw-gauge.gauge
+ * @package    com.kiwity.gauge.gauge
  * @author     Salvador Subarroca (subarroca@gmail.com)
 **/
 
@@ -14,8 +14,6 @@ import { Component, OnInit, Input } from '@angular/core';
 
 
 // EXTERNAL
-import { Observable } from 'rxjs/Rx';
-
 
 
 
@@ -28,16 +26,16 @@ import { GaugeLabel } from './shared/gauge-label';
 
 
 @Component({
-  selector: 'ng2-kw-gauge',
+  selector: 'ng-gauge',
   templateUrl: './gauge.component.html',
   styleUrls: ['./gauge.component.scss']
 })
 export class GaugeComponent implements OnInit {
-  @Input() bgRadius: number = 100;
+  @Input() bgRadius = 100;
   @Input() bgColor: string;
-  @Input() rounded: boolean = true;
-  @Input() reverse: boolean = false;
-  @Input() animationSecs: number = 0.5;
+  @Input() rounded = true;
+  @Input() reverse = false;
+  @Input() animationSecs = 0.5;
 
   @Input() labels: GaugeLabel[];
 
@@ -47,12 +45,13 @@ export class GaugeComponent implements OnInit {
     this.segmentsLoaded = false;
     this.sortedSegments = this.sortSegments(segments);
 
-    Observable.timer(0)
-      .first()
-      .subscribe(() => this.segmentsLoaded = true);
+    // wait a bit and start animation
+    setTimeout(
+      () => this.segmentsLoaded = true,
+      0);
   }
   sortedSegments: GaugeSegment[];
-  segmentsLoaded: boolean = false;
+  segmentsLoaded = false;
 
   isIE11 = /Trident.*rv[ :]*11\./.test(navigator.userAgent);
 

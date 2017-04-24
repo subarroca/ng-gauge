@@ -1,6 +1,6 @@
 /**
  * @category   Module
- * @package    com.kiwity.ng2-kw-gauge.gauge
+ * @package    com.kiwity.gauge.gauge
  * @author     Salvador Subarroca (subarroca@gmail.com)
 **/
 
